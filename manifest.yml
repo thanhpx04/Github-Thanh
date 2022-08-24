@@ -1,12 +1,17 @@
 modules:
   jira:issueGlance:
-    - key: github-thanh-hello-world-glance
+    - key: github-thanh-on-issue-glance
       function: main
       title: Github-Thanh
-      description: A hello world issue glance.
+      description: GitHub plugin on Jira cloud. Develop by Forge framework.
       label: Hello World!
+  webtrigger:
+    - key: gihub-web-trigger-key
+      function: gihub-web-trigger-function
   function:
     - key: main
       handler: index.run
+    - key: gihub-web-trigger-function
+      handler: github-webhooks.handler
 app:
   id: ari:cloud:ecosystem::app/b59d914d-4602-4d6f-9eac-4fbb7e6e01b8
